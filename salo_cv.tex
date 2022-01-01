@@ -7,11 +7,16 @@
 \usepackage{fontawesome}
 \usepackage{setspace}
 \usepackage{hyperref}
+\usepackage{cleveref}[2012/02/15]
 \usepackage{academicons}
 \usepackage[yyyymmdd]{datetime}
+\usepackage{xcolor}
 
 % Environment to place line at bottom of page.
 \newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
+
+% Use symbols for footnotes
+\crefformat{footnote}{#2\footnotemark[#1]#3}
 
 % Set margins.
 \oddsidemargin=0.0in
@@ -40,6 +45,14 @@
 \newcommand{\sectionstyle}{\LARGE \fontfamily{lmr}\selectfont}
 \newcommand{\at}{\makeatletter @\makeatother}
 \newcommand{\textlink}[3][blue]{\href{#2}{\color{#1}{#3}}}
+
+% Make sure hyperlinks aren't hideously visible
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={black!80!black}
+}
 
 \date{}
 
@@ -78,6 +91,12 @@
 \flushright
 \headstyle{Miami, FL 33199}
 \end{minipage}
+
+% Now make URL hyperlinks blue
+\hypersetup{
+    colorlinks,
+    urlcolor={blue!80!black}
+}
 
 \bigskip
 
@@ -271,11 +290,32 @@ Bachelor of Arts,
 
 \begin{hangparas}{.25in}{1}
 
+	DuPre, E.\footnote{\label{note1}Co-first authors},
+	\textbf{Salo, T.}\cref{note1},
+	Ahmed, Z., Bandettini, P. A., Bottenhorn, K. L., Caballero-Gaudes, C., Dowdle, L. T.,
+	Gonzalez-Castillo, J., Heunis, S., Kundu, P., Laird, A. R., Markello, R., Markiewicz, C. J.,
+	Moia, S., Staden, I., Teves, J. B., Uruñuela, E., Vaziri-Pashkam, M., Whitaker, K.,
+	\& Handwerker, D. A. (2021).
+	TE-dependent analysis of multi-echo fMRI with \emph{tedana}.
+	\emph{Journal of Open Source Software}, 6(66), 3669.
+	doi:\textlink{https://doi.org/10.21105/joss.03669}{10.21105/joss.03669}.
+
+	\bigskip
+
+	Flannery, J. S., Riedel, M. C., \textbf{Salo, T.}, Hill-Bowen, L. D., Poudel, R., Adams, A. R.,
+	Laird, A. R., Gonzalez, R., \& Sutherland, M. T. (2021).
+	Interactive Effects of HIV Infection and Cannabis Use on Insula Subregion Functional Connectivity.
+	\emph{Journal of Neuroimmune Pharmacology}, 1-16.
+	doi:\textlink{https://doi.org/10.1007/s11481-021-10005-8}{10.1007/s11481-021-10005-8}.
+
+	\bigskip
+
 	Hill-Bowen, L. D., Riedel, M. C., Poudel, R., \textbf{Salo, T.}, Flannery, J. S.,
 	Camilleri, J. A., Eickhoff, S. B., Laird, A. R., \& Sutherland, M. T. (2021).
 	The cue-reactivity paradigm: An ensemble of networks driving attention and cognition
 	when viewing drug and natural reward-related stimuli.
 	\emph{Neuroscience and Biobehavioral Reviews}.
+	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2021.08.010}{10.1016/j.neubiorev.2021.08.010}.
 
 	\bigskip
 
@@ -284,14 +324,14 @@ Bachelor of Arts,
 	HIV infection is linked with reduced error-related default mode network suppression and poorer
 	medication management abilities.
 	\emph{Progress in Neuro-Psychopharmacology and Biological Psychiatry}.
-	doi:\textlink{https://doi.org/10.1016/j.pnpbp.2021.110398}{10.1016/j.pnpbp.2021.110398}
+	doi:\textlink{https://doi.org/10.1016/j.pnpbp.2021.110398}{10.1016/j.pnpbp.2021.110398}.
 
 	\bigskip
 
 	Witt, S. T., van Ettinger-Veenstra, H., \textbf{Salo, T.}, Riedel, M. C., \& Laird, A. R. (2021).
     What executive function network is that? An image-based meta-analysis of network labels.
     \emph{Brain Topography}.
-    doi:\textlink{https://doi.org/10.1007/s10548-021-00847-z}{10.1007/s10548-021-00847-z}
+    doi:\textlink{https://doi.org/10.1007/s10548-021-00847-z}{10.1007/s10548-021-00847-z}.
 
 	\bigskip
 
@@ -327,7 +367,7 @@ Bachelor of Arts,
 	Eickhoff, S. B., Laird, A. R., \& Sutherland, M. T. (2020).
 	Common and distinct brain activity associated with risky and ambiguous decision-making.
 	\emph{Drug and Alcohol Dependence} 209.
-	doi:\textlink{https://doi.org/10.1016/j.drugalcdep.2020.107884}{10.1016/j.drugalcdep.2020.107884}
+	doi:\textlink{https://doi.org/10.1016/j.drugalcdep.2020.107884}{10.1016/j.drugalcdep.2020.107884}.
 
 	\bigskip
 
@@ -335,14 +375,14 @@ Bachelor of Arts,
 	\textbf{Salo, T.}, Hill-Bowen, L. D., Laird, A. R., \& Sutherland, M. T. (2020).
 	Meta-analytic clustering dissociates brain activity and behavior profiles across reward processing paradigms.
 	\emph{Cognitive Affective Behavioral Neuroscience} 20, 215–235.
-	doi:\textlink{https://doi.org/10.3758/s13415-019-00763-7}{10.3758/s13415-019-00763-7}
+	doi:\textlink{https://doi.org/10.3758/s13415-019-00763-7}{10.3758/s13415-019-00763-7}.
 
 	\bigskip
 
 	Bolt, T., Nomi, J. S., Arens, R., Vij, S. G., Riedel, M. C.,
 	\textbf{Salo, T.}, Laird, A. R., Eickhoff, S. B., \& Uddin, L. Q. (2020).
 	Ontological dimensions of cognitive-neural mappings. \emph{Neuroinformatics}.
-	doi:\textlink{https://doi.org/10.1007/s12021-020-09454-y}{10.1007/s12021-020-09454-y}
+	doi:\textlink{https://doi.org/10.1007/s12021-020-09454-y}{10.1007/s12021-020-09454-y}.
 
 	\bigskip
 
@@ -350,7 +390,7 @@ Bachelor of Arts,
 	OHBM Student and Postdoc Special Interest Group. (2020).
 	Effective Self-Management for Early Career Researchers in the Natural and Life Sciences.
 	\emph{Neuron}, \emph{106}(2), 212-217.
-	doi:\textlink{https://doi.org/10.1016/j.neuron.2020.03.015}{10.1016/j.neuron.2020.03.015}
+	doi:\textlink{https://doi.org/10.1016/j.neuron.2020.03.015}{10.1016/j.neuron.2020.03.015}.
 
 	\bigskip
 
@@ -359,7 +399,7 @@ Bachelor of Arts,
 	Pruden, S. M., Brewe, E., \& Laird, A. R. (2019).
 	Brain activity links performance in science reasoning with conceptual approach.
 	\emph{NPJ Science of Learning} \emph{4}(20).
-	doi:\textlink{https://doi.org/10.1038/s41539-019-0059-8}{10.1038/s41539-019-0059-8}
+	doi:\textlink{https://doi.org/10.1038/s41539-019-0059-8}{10.1038/s41539-019-0059-8}.
 
 	\bigskip
 
@@ -368,7 +408,7 @@ Bachelor of Arts,
 	Brewe, E., Pruden, S. M., \& Laird, A. R. (2019).
 	Sex differences in brain correlates of STEM anxiety.
 	\emph{NPJ Science of Learning} \emph{4}(18).
-	doi:\textlink{https://doi.org/10.1038/s41539-019-0058-9}{10.1038/s41539-019-0058-9}
+	doi:\textlink{https://doi.org/10.1038/s41539-019-0058-9}{10.1038/s41539-019-0058-9}.
 
 	\bigskip
 
@@ -381,7 +421,7 @@ Bachelor of Arts,
 	Visconti di Oleggio Castello, M., Notter, M. P., \& Blair, R. (2019).
 	PyBIDS: Python tools for BIDS datasets.
 	\emph{Journal of Open Source Software}, \emph{4}(40), 1294.
-	doi:\textlink{https://doi.org/10.21105/joss.01294}{10.21105/joss.01294}
+	doi:\textlink{https://doi.org/10.21105/joss.01294}{10.21105/joss.01294}.
 
 	\bigskip
 
@@ -390,7 +430,7 @@ Bachelor of Arts,
 	Automated, efficient, and accelerated knowledge modeling of the cognitive
 	neuroimaging literature using the ATHENA toolkit.
 	\emph{Frontiers in Neuroscience}, 13, 494.
-	doi:\textlink{https://www.frontiersin.org/articles/10.3389/fnins.2019.00494/}{10.3389/fnins.2019.00494}
+	doi:\textlink{https://www.frontiersin.org/articles/10.3389/fnins.2019.00494/}{10.3389/fnins.2019.00494}.
 
 	\bigskip
 
@@ -399,7 +439,7 @@ Bachelor of Arts,
 	\& Laird, A. R. (2018).
 	Meta-analytic evidence for a core problem solving network across multiple
 	representational domains. \emph{Neuroscience and Biobehavioral Reviews}, 92, 318-337.
-	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2018.06.009}{10.1016/j.neubiorev.2018.06.009}
+	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2018.06.009}{10.1016/j.neubiorev.2018.06.009}.
 
 	\bigskip
 
@@ -408,7 +448,7 @@ Bachelor of Arts,
 	Laird, R. W., Sutherland, M. T., Pruden, S. M., \& Laird, A. R. (2018).
 	Toward a Neurobiological Basis for Understanding Learning in University Modeling
 	Instruction Physics Courses. \emph{Frontiers in ICT}, 5, 10.
-	doi:\textlink{https://doi.org/10.3389/fict.2018.00010}{10.3389/fict.2018.00010}
+	doi:\textlink{https://doi.org/10.3389/fict.2018.00010}{10.3389/fict.2018.00010}.
 
 	\bigskip
 
@@ -416,7 +456,7 @@ Bachelor of Arts,
 	MacDonald, A. W., Gold, J. M., Silverstein, S. M., Barch, D. M., \& Carter,
 	C. S. (2017). Functional network changes and cognitive control in schizophrenia.
 	\emph{NeuroImage: Clinical}, 15, 161-170.
-	doi:\textlink{https://doi.org/10.1016/j.nicl.2017.05.001}{10.1016/j.nicl.2017.05.001}
+	doi:\textlink{https://doi.org/10.1016/j.nicl.2017.05.001}{10.1016/j.nicl.2017.05.001}.
 
 	\bigskip
 
@@ -425,14 +465,14 @@ Bachelor of Arts,
 	(2016). The neural circuitry supporting goal maintenance during cognitive
 	control: a comparison of AX-CPT and dot probe expectancy paradigms.
 	\emph{Cognitive, Affective, \& Behavioral Neuroscience}, \emph{16}(1), 164.
-	doi:\textlink{https://doi.org/10.3758/s13415-015-0384-1}{10.3758/s13415-015-0384-1}
+	doi:\textlink{https://doi.org/10.3758/s13415-015-0384-1}{10.3758/s13415-015-0384-1}.
 
 	\bigskip
 
 	Phillips, R. C., \textbf{Salo, T.}, \& Carter, C. S. (2015). Distinct neural
 	correlates for attention lapses in patients with schizophrenia and healthy
 	participants. \emph{Frontiers in human neuroscience}, 9.
-	doi:\textlink{https://doi.org/10.3389/fnhum.2015.00502}{10.3389/fnhum.2015.00502}
+	doi:\textlink{https://doi.org/10.3389/fnhum.2015.00502}{10.3389/fnhum.2015.00502}.
 
 \end{hangparas}
 
@@ -442,6 +482,15 @@ Bachelor of Arts,
 
 \begin{hangparas}{.25in}{1}
 
+	Karakuzu, A., Appelhoff, S., Auer, T., Boudreau, M., Feingold, F., Khan, A. R.,
+	Lazari, A., Markiewicz, C. J., Mulder, M. J., Phillips, C., \textbf{Salo, T.},
+	Stikov, N., Whitaker, K., \& de Hollander, G. (2021).
+	qMRI-BIDS: An extension to the brain imaging data structure for quantitative magnetic resonance imaging data.
+	\emph{medRxiv}.
+	doi:\textlink{https://doi.org/10.1101/2021.10.22.21265382}{10.1101/2021.10.22.21265382}.
+
+	\bigskip
+
 	Norgaard, M., Matheson, G. J., Hansen, H. D., Thomas, A. G., Searle, G., Rizzo, G.,
 	Veronese, M., Giacomel, A., Yaqub, M., Tonietto, M., Funck, T., Gillman, A.,
 	Boniface, H., Routier, A., Dalenberg, J. R., Betthauser, T., Feingold, F.,
@@ -450,7 +499,7 @@ Bachelor of Arts,
 	Gallezot, J., Knudsen, G. M., Innis, R. B., \& Ganz, M. (2021).
 	PET-BIDS, an extension to the brain imaging data structure for positron emission tomography
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.06.16.448390}{10.1101/2021.06.16.448390}
+	doi:\textlink{https://doi.org/10.1101/2021.06.16.448390}{10.1101/2021.06.16.448390}.
 
 	\bigskip
 
@@ -458,7 +507,7 @@ Bachelor of Arts,
 	Musser, E. D., \& Laird, A. R. (2021).
 	Denoising physiological data collected during multi-band, multi-echo EPI sequences.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.04.01.437293}{10.1101/2021.04.01.437293}
+	doi:\textlink{https://doi.org/10.1101/2021.04.01.437293}{10.1101/2021.04.01.437293}.
 
 	\bigskip
 
@@ -467,7 +516,7 @@ Bachelor of Arts,
 	Sutherland, M. T., \& Laird, A. R. (2021).
 	Intelligence and academic performance: Is it all in your head?
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.01.23.427928}{10.1101/2021.01.23.427928}
+	doi:\textlink{https://doi.org/10.1101/2021.01.23.427928}{10.1101/2021.01.23.427928}.
 
 	\bigskip
 
@@ -475,7 +524,7 @@ Bachelor of Arts,
 	Boeving E. R., Laird R. W., Sutherland M. T., Pruden S. M., Brewe E., \&
 	Laird A. R. (2019).
 	Sex and pedagogy influences in learning-related reorganization of brain activity.
-	\emph{bioRxiv}. doi:\textlink{https://doi.org/10.1101/791301}{10.1101/791301}
+	\emph{bioRxiv}. doi:\textlink{https://doi.org/10.1101/791301}{10.1101/791301}.
 
 \end{hangparas}
 
