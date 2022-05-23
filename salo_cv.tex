@@ -12,12 +12,17 @@
 \usepackage[yyyymmdd]{datetime}
 \usepackage{xcolor}
 \usepackage{scrextend}  % for footref
+\usepackage{changepage}  % for adjustwidth
 
 % Environment to place line at bottom of page.
 \newenvironment{bottompar}{\par\vspace*{\fill}}{\clearpage}
 
 % Use symbols for footnotes
 \crefformat{footnote}{#2\footnotemark[#1]#3}
+
+% Define a few useful commands
+\newcommand{\doi}[1]{doi: \textlink{https://doi.org/#1}{#1}}
+\newcommand{\shorturl}[1]{\href{https://#1}{\textsc{#1}}}
 
 % Set margins.
 \oddsidemargin=0.0in
@@ -103,49 +108,70 @@
 
 \begin{center}\sectionstyle{PROFILE}\end{center}
 
-Methodologically oriented cognitive neuroscientist interested in
-neuroinformatics. Strong technical skills in neuroimaging data
-processing, analysis, and meta-analysis. Passionate about transparency
-and reproducibility.
+Methodologically oriented cognitive neuroscientist interested in neuroinformatics.
+Strong technical skills in neuroimaging data processing, analysis, and meta-analysis.
+Passionate about transparency and reproducibility.
 
 \bigskip
 
 \begin{center}\sectionstyle{EDUCATION}\end{center}
 
 \begin{minipage}[t]{.7\linewidth}
-\flushleft
-\noindent
-\href{https://fiu.edu}{\textbf{Florida International University}},
-Doctor of Philosophy,
-\href{https://case.fiu.edu/psychology/phd-in-cognitive-neuroscience/}{Cognitive Neuroscience}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{.3\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2015 -- 2022}}
+	\flushleft
+	\noindent
+	Ph.D.
+	\href{https://fiu.edu}{\textbf{Florida International University}},
+	\href{https://case.fiu.edu/psychology/phd-in-cognitive-neuroscience/}{Cognitive Neuroscience}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.3\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2018 -- 2022}}
 \end{minipage}
 
 \begin{itemize}[noitemsep, nolistsep]
-\item
-  Advisor:
-	\href{https://nbclab.github.io/team/angela-laird}{Dr. Angela Laird}
+	\item Dissertation: Developing and Validating Open Source Tools for Advanced Neuroimaging Research
+
+	\item Advisor: \href{https://nbclab.github.io/team/angela-laird}{Dr. Angela Laird}
 \end{itemize}
 
 \bigskip
 
 \begin{minipage}[t]{.7\linewidth}
-\flushleft
-\noindent
-\href{https://cornell.edu}{\textbf{Cornell University}},
-Bachelor of Arts,
-\href{https://www.psych.cornell.edu}{Psychology}
+	\flushleft
+	\noindent
+	M.S.
+	\href{https://fiu.edu}{\textbf{Florida International University}},
+	\href{https://psychology.fiu.edu}{Psychology}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.3\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2015 -- 2018}}
 \end{minipage}
-\hfill
-\begin{minipage}[t]{.3\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2009 -- 2013}}
+
+\begin{itemize}[noitemsep, nolistsep]
+	\item Thesis: Meta-analytic search term performance and its effect on neuroimaging meta-analytic power
+
+	\item Advisor: \href{https://nbclab.github.io/team/angela-laird}{Dr. Angela Laird}
+\end{itemize}
+
+\bigskip
+
+\begin{minipage}[t]{.7\linewidth}
+	\flushleft
+	\noindent
+	B.A.
+	\href{https://cornell.edu}{\textbf{Cornell University}},
+	\href{https://www.psych.cornell.edu}{Psychology}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.3\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2009 -- 2013}}
 \end{minipage}
 
 \begin{itemize}[noitemsep, nolistsep]
@@ -162,54 +188,54 @@ Bachelor of Arts,
 \begin{center}\sectionstyle{EXPERIENCE}\end{center}
 
 \begin{minipage}[t]{.8\linewidth}
-\flushleft
-\noindent
-\textbf{Graduate Assistant},
-\href{https://nbclab.github.io}
-{\emph{\textbf{Neuroinformatics and Brain Connectivity Laboratory}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{.2\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2015 -- 2022}}
+	\flushleft
+	\noindent
+	\textbf{Graduate Assistant},
+	\href{https://nbclab.github.io}
+	{\textbf{Neuroinformatics and Brain Connectivity Laboratory}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.2\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2015 -- 2022}}
 \end{minipage}
 
-\href{https://nbclab.github.io/team/laird-angela}{\emph{Dr. Angela Laird}},
-\href{http://www.fiu.edu}{\emph{Florida International University}}
+\href{https://nbclab.github.io/team/laird-angela}{Dr. Angela Laird},
+\href{http://www.fiu.edu}{Florida International University}
 
 \begin{itemize}[noitemsep, nolistsep]
-\item
-  Currently assisting in the development of a tool for annotation of the
-  neuroimaging literature using natural language processing and machine
-  learning.
-\item
-  Currently engaged in a project quantitatively comparing the Neurosynth
-  and BrainMap frameworks.
-\item
-  Providing assistance in the development and implementation of
-  neuroimaging data analysis pipelines for several projects within the
-  lab.
+
+\item Co-designed and executed a dense acquisition MRI pilot study.
+
+\item Processed and analyzed neuroimaging data for multiple projects.
+
+\item Implemented behavioral tasks in PsychoPy for multiple projects.
+
+\item Developed, maintained, and/or contributed to several open source software projects.
+
+\item Served as a Teaching Assistant for the ABCD-ReproNim Course (https://www.abcd-repronim.org).
+
 \end{itemize}
 
 \bigskip
 
 \begin{minipage}[t]{.85\linewidth}
-\flushleft
-\noindent
-\textbf{Junior Specialist},
-\href{http://carterlab.ucdavis.edu/front/index.php}
-{\emph{\textbf{Translational Cognitive and Affective Neuroscience Laboratory}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{.15\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2013 -- 2015}}
+	\flushleft
+	\noindent
+	\textbf{Junior Specialist},
+	\href{http://carterlab.ucdavis.edu/front/index.php}
+	{\textbf{Translational Cognitive and Affective Neuroscience Laboratory}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2013 -- 2015}}
 \end{minipage}
 
-\href{http://carterlab.ucdavis.edu/people/carter.php}{\emph{Dr. Cameron Carter}},
-\href{https://www.ucdavis.edu}{\emph{University of California, Davis}}
+\href{http://carterlab.ucdavis.edu/people/carter.php}{Dr. Cameron Carter},
+\href{https://www.ucdavis.edu}{University of California, Davis}
 
 \begin{itemize}[noitemsep, nolistsep]
 \item
@@ -233,20 +259,20 @@ Bachelor of Arts,
 \bigskip
 
 \begin{minipage}[t]{.85\linewidth}
-\flushleft
-\noindent
-\textbf{Lab Co-Manager/Research Assistant},
-\emph{\textbf{Laboratory for Lifespan Affective Neuroscience}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{.15\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2011 -- 2013}}
+	\flushleft
+	\noindent
+	\textbf{Lab Co-Manager/Research Assistant},
+	\textbf{Laboratory for Lifespan Affective Neuroscience}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2011 -- 2013}}
 \end{minipage}
 
-\emph{Dr. Barbara Ganzel},
-\href{http://www.cornell.edu}{\emph{Cornell University}}
+Dr. Barbara Ganzel,
+\href{http://www.cornell.edu}{Cornell University}
 
 \begin{itemize}[noitemsep, nolistsep]
 \item
@@ -260,20 +286,20 @@ Bachelor of Arts,
 \bigskip
 
 \begin{minipage}[t]{.85\linewidth}
-\flushleft
-\noindent
-\textbf{Undergraduate Research Assistant},
-\href{http://people.psych.cornell.edu/~devoogdlab/}{\emph{\textbf{Bird Song Behavior Laboratory}}}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{.15\linewidth}
-\flushright
-\noindent
-\textsc{\textbf{2012 -- 2013}}
+	\flushleft
+	\noindent
+	\textbf{Undergraduate Research Assistant},
+	\href{http://people.psych.cornell.edu/~devoogdlab/}{\textbf{Bird Song Behavior Laboratory}}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2012 -- 2013}}
 \end{minipage}
 
-\href{http://www.psych.cornell.edu/people/faculty/devoogd-profile/}{\emph{Dr. Timothy DeVoogd}},
-\href{http://www.cornell.edu}{\emph{Cornell University}}
+\href{http://www.psych.cornell.edu/people/faculty/devoogd-profile/}{Dr. Timothy DeVoogd},
+\href{http://www.cornell.edu}{Cornell University}
 
 \begin{itemize}[noitemsep, nolistsep]
 \item
@@ -285,8 +311,356 @@ Bachelor of Arts,
 
 \newpage
 
-\begin{center}\sectionstyle{PUBLICATIONS}\end{center}
+\begin{center}\sectionstyle{SOFTWARE AND PROJECT DEVELOPMENT}\end{center}
 
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{NiMARE}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+	\flushright
+	\noindent
+	\textbf{\shorturl{nimare.readthedocs.io}}
+\end{minipage}
+
+\emph{Lead Developer}
+
+\begin{adjustwidth}{2em}{0em}
+	NiMARE (Neuroimaging Meta-Analysis Research Environment) is a Python library for performing meta-analyses,
+	and derivative analyses using meta-analytic data, for neuroimaging research.
+	This tool supports a range of coordinate- and image-based meta-analysis algorithms.
+	NiMARE was conceived at the Code Rodeo sprint in 2018, and since then I have been the lead developer.
+	NiMARE is part of a growing ecosystem of primarily Python-based tools for meta-analysis,
+	including NeuroStore, Neurosynth 2.0, NeuroQuery, and PyMARE.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{The Brain Imaging Data Standard}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+	\flushright
+	\noindent
+	\textbf{\shorturl{bids-specification.readthedocs.io}}
+\end{minipage}
+
+\emph{Maintainer Team Member}
+
+\begin{adjustwidth}{2em}{0em}
+	The Brain Imaging Data Standard (BIDS) is a specification for organizing and annotating neuroimaging data.
+	As a member of the maintainers team, I have been responsible for ensuring specification consistency
+	and helping contributors (especially large-scale BIDS extension proposals) add new elements to the specification.
+	In addition to my regular maintainer work, I have also spearheaded the creation of the BIDS schema,
+	which translates portions of the text-based specification into machine-readable YAML files.
+	As of now, this schema directly renders the majority of tables within the specification,
+	and we are in the process of using it in tools built around BIDS, including the BIDS validator, PyBIDS, and bids-matlab.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{Tedana}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+	\flushright
+	\noindent
+	\textbf{\shorturl{tedana.readthedocs.io}}
+\end{minipage}
+
+\emph{Maintainer Team Member}
+
+\begin{adjustwidth}{2em}{0em}
+	Tedana (TE-Dependent ANAlysis) is a Python library for denoising multi-echo fMRI data.
+	This library succeeds the meica.py tool, with several new features and a new emphasis on best programming practices.
+	I have been a member of the Tedana maintainers team since 2018.
+	In addition to developing Tedana directly, the maintainers team has also created several associated tools,
+	including mapca, ddmra, godec, aroma, and RICA.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{Nilearn}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+	\flushright
+	\noindent
+	\textbf{\shorturl{nilearn.github.io}}
+\end{minipage}
+
+\emph{Maintainer Team Member}
+
+\begin{adjustwidth}{2em}{0em}
+	Nilearn is a popular Python library for neuroimaging data analysis, decoding, and visualization.
+	I joined the Nilearn maintainers team in 2021, and have primarily focused my contributions on improving
+	documentation and general linear model support, including adding cluster-level and TFCE-based correction.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{PyMARE}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.5\linewidth}
+	\flushright
+	\noindent
+	\textbf{\shorturl{pymare.readthedocs.io}}
+\end{minipage}
+
+\emph{Lead Maintainer}
+
+\begin{adjustwidth}{2em}{0em}
+	PyMARE is a Python library for effect-size meta-analysis.
+	PyMARE was developed as a sister library to NiMARE, with a focus on general-purpose meta-analyses.
+	The meta-analytic estimators implemented in PyMARE are then used within NiMARE for image-based meta-analyses.
+	Since PyMARE's primary developer left academia in 2021, I have filled in as its maintainer.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{minipage}[t]{.5\linewidth}
+	\flushleft
+	\noindent
+	\textbf{Other open source software}
+\end{minipage}
+\hfill
+
+\emph{Contributor}
+
+\begin{adjustwidth}{2em}{0em}
+	I am a regular contributor to several other open source projects, including fMRIPrep, PyBIDS, HeuDiConv, and Neurosynth.
+\end{adjustwidth}
+
+\bigskip
+
+\begin{center}\sectionstyle{HONORS AND AWARDS}\end{center}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Brain Initiative Principal Investigators Meeting Trainee Travel Award
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2019}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Organization for Human Brain Mapping Hackathon Travel Award
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2017}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Organization for Human Brain Mapping Merit Abstract Travel Award
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2017}}
+\end{minipage}
+
+\newpage
+
+\begin{center}\sectionstyle{HACKATHONS}\end{center}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	NiMARE/Neurosynth 2.0 Coding Sprint
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2022}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	BIDS Schema Coding Sprint
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2022}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	OHBM Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2021}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	BrainHack Donostia
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2020}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	OHBM Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2020}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	NIH Code Convergence
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2019}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	NIH Tedana Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2019}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	OHBM Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2019}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Coastal Coding
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2019}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	FIU Brainconn Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2018}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	BrainHack Montreal
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2018}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Code Rodeo
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2018}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	OHBM Hackathon
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2017}}
+\end{minipage}
+
+\begin{minipage}[t]{.85\linewidth}
+	\flushleft
+	\noindent
+	Neurohackweek
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{.15\linewidth}
+	\flushright
+	\noindent
+	\textsc{\textbf{2016}}
+\end{minipage}
+
+\bigskip
+
+\begin{center}\sectionstyle{PUBLICATIONS}\end{center}
 
 \begin{enumerate}
 
@@ -294,150 +668,163 @@ Bachelor of Arts,
 	(2022).
 	Microscopy-BIDS: An Extension to the Brain Imaging Data Structure for Microscopy Data.
 	\emph{Frontiers in Neuroscience}.
-	doi:\textlink{https://doi.org/10.3389/fnins.2022.871228}{10.3389/fnins.2022.871228}.
+	\doi{10.3389/fnins.2022.871228}.
 
 	\item Poudel R, Tobia MJ, Riedel MC, \textbf{Salo T}, Flannery JS, Hill-Bowen LD, Dick AS, Laird AR, Parra CM, \& Sutherland MT.
 	(2022).
 	Risky decision-making strategies mediate the relationship between amygdala activity and real-world financial savings among individuals from lower income households: A pilot study.
 	\emph{Behavioural Brain Research}.
-	doi:\textlink{https://doi.org/10.1016/j.bbr.2022.113867}{10.1016/j.bbr.2022.113867}.
+	\doi{10.1016/j.bbr.2022.113867}.
 
 	\item Flannery JS, Riedel MC, Hill-Bowen LD, Poudel R, Bottenhorn KL, \textbf{Salo T}, Laird AR, Gonzalez R, \& Sutherland MT.
 	(2022).
 	Altered large-scale brain network interactions associated with HIV infection and error processing.
 	\emph{Network Neuroscience}.
-	doi:\textlink{https://doi.org/10.1162/netn_a_00241}{10.1162/netn\_a\_00241}.
+	\doi{10.1162/netn\_a\_00241}.
 
 	\item Norgaard M, Matheson GJ, Hansen HD, Thomas A, Searle G, Rizzo G, Veronese M, Giacomel A, Yaqub M, Tonietto M, ..., \textbf{Salo T}, ..., \& Ganz M.
 	(2022).
 	PET-BIDS, an extension to the brain imaging data structure for positron emission tomography.
 	\emph{Scientific data}.
-	doi:\textlink{https://doi.org/10.1038/s41597-022-01164-1}{10.1038/s41597-022-01164-1}.
+	\doi{10.1038/s41597-022-01164-1}.
 
 	\item Flannery JS, Riedel MC, \textbf{Salo T}, Hill-Bowen LD, Poudel R, Adams AR, Laird AR, Gonzalez R, \& Sutherland MT.
 	(2021).
 	Interactive Effects of HIV Infection and Cannabis Use on Insula Subregion Functional Connectivity.
 	\emph{Journal of Neuroimmune Pharmacology}.
-	doi:\textlink{https://doi.org/10.1007/s11481-021-10005-8}{10.1007/s11481-021-10005-8}.
+	\doi{10.1007/s11481-021-10005-8}.
 
-	\item DuPre E\footnote{\label{note1}Co-first authors}, \textbf{Salo T}\footref{note1}, Ahmed Z, Bandettini PA, Bottenhorn KL, Caballero-Gaudes C, Dowdle LT, Gonzalez-Castillo J, Heunis S, \& Kundu P.
+	\item DuPre E\footnote{\label{note1}Contributed equally}, \textbf{Salo T}\footref{note1}, Ahmed Z, Bandettini PA, Bottenhorn KL, Caballero-Gaudes C, Dowdle LT, Gonzalez-Castillo J, Heunis S, \& Kundu P.
 	(2021).
 	TE-dependent analysis of multi-echo fMRI with tedana.
 	\emph{Journal of Open Source Software}.
-	doi:\textlink{https://doi.org/10.21105/joss.03669}{10.21105/joss.03669}.
+	\doi{10.21105/joss.03669}.
 
 	\item Flannery JS, Riedel MC, \textbf{Salo T}, Poudel R, Laird AR, Gonzalez R, \& Sutherland MT.
 	(2021).
 	HIV infection is linked with reduced error-related default mode network suppression and poorer medication management abilities.
 	\emph{Progress in Neuro-Psychopharmacology and Biological Psychiatry}.
-	doi:\textlink{https://doi.org/10.1016/j.pnpbp.2021.110398}{10.1016/j.pnpbp.2021.110398}.
+	\doi{10.1016/j.pnpbp.2021.110398}.
 
 	\item Witt ST, van Ettinger-Veenstra H, \textbf{Salo T}, Riedel MC, \& Laird AR.
 	(2021).
 	What executive function network is that? An image-based meta-analysis of network labels.
 	\emph{Brain topography}.
-	doi:\textlink{https://doi.org/10.1007/s10548-021-00847-z}{10.1007/s10548-021-00847-z}.
+	\doi{10.1007/s10548-021-00847-z}.
 
 	\item Hill-Bowen LD, Riedel MC, Poudel R, \textbf{Salo T}, Flannery JS, Camilleri JA, Eickhoff SB, Laird AR, \& Sutherland MT.
 	(2021).
 	The cue-reactivity paradigm: An ensemble of networks driving attention and cognition when viewing drug and natural reward-related stimuli.
 	\emph{Neuroscience \& Biobehavioral Reviews}.
-	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2021.08.010}{10.1016/j.neubiorev.2021.08.010}.
+	\doi{10.1016/j.neubiorev.2021.08.010}.
 
 	\item Poudel R, Riedel MC, \textbf{Salo T}, Flannery JS, Hill-Bowen LD, Eickhoff SB, Laird AR, \& Sutherland MT.
 	(2020).
 	Common and distinct brain activity associated with risky and ambiguous decision-making.
 	\emph{Drug and alcohol dependence}.
-	doi:\textlink{https://doi.org/10.1016/j.drugalcdep.2020.107884}{10.1016/j.drugalcdep.2020.107884}.
+	\doi{10.1016/j.drugalcdep.2020.107884}.
 
 	\item Botvinik-Nezer R, Holzmeister F, Camerer CF, Dreber A, Huber J, Johannesson M, Kirchler M, Iwanir R, Mumford JA, Adcock RA, ..., \textbf{Salo T}, ..., \& Rieck JR.
 	(2020).
 	Variability in the analysis of a single neuroimaging dataset by many teams.
 	\emph{Nature}.
-	doi:\textlink{https://doi.org/10.1038/s41586-020-2314-9}{10.1038/s41586-020-2314-9}.
+	\doi{10.1038/s41586-020-2314-9}.
 
 	\item Bielczyk NZ, Ando A, Badhwar A, Caldinelli C, Gao M, Haugg A, Hernandez LM, Ito KL, Kessler D, Lurie D, ..., \textbf{Salo T}, ..., \& Postdoc Special Interest Group
 	(2020).
 	Effective self-management for early career researchers in the natural and life sciences.
 	\emph{Neuron}.
-	doi:\textlink{https://doi.org/10.1016/j.neuron.2020.03.015}{10.1016/j.neuron.2020.03.015}.
+	\doi{10.1016/j.neuron.2020.03.015}.
 
 	\item Flannery JS, Riedel MC, Bottenhorn KL, Poudel R, \textbf{Salo T}, Hill-Bowen LD, Laird AR, \& Sutherland MT.
 	(2020).
 	Meta-analytic clustering dissociates brain activity and behavior profiles across reward processing paradigms.
 	\emph{Cognitive, Affective, \& Behavioral Neuroscience}.
-	doi:\textlink{https://doi.org/10.3758/s13415-019-00763-7}{10.3758/s13415-019-00763-7}.
+	\doi{10.3758/s13415-019-00763-7}.
 
 	\item Morawetz C, Riedel MC, \textbf{Salo T}, Berboth S, Eickhoff SB, Laird AR, \& Kohn N.
 	(2020).
 	Multiple large-scale neural networks underlying emotion regulation.
 	\emph{Neuroscience \& Biobehavioral Reviews}.
-	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2020.07.001}{10.1016/j.neubiorev.2020.07.001}.
+	\doi{10.1016/j.neubiorev.2020.07.001}.
 
 	\item Esteban O, Ciric R, Finc K, Blair RW, Markiewicz CJ, Moodie CA, Kent JD, Goncalves M, DuPre E, Gomez DE, ..., \textbf{Salo T}, ..., \& Gorgolewski KJ.
 	(2020).
 	Analysis of task-based functional MRI data preprocessed with fMRIPrep.
 	\emph{Nature Protocols}.
-	doi:\textlink{https://doi.org/10.1038/s41596-020-0327-3}{10.1038/s41596-020-0327-3}.
+	\doi{10.1038/s41596-020-0327-3}.
 
 	\item Bolt T, Nomi JS, Arens R, Vij SG, Riedel M, \textbf{Salo T}, Laird AR, Eickhoff SB, \& Uddin LQ.
 	(2020).
 	Ontological dimensions of cognitive-neural mappings.
 	\emph{Neuroinformatics}.
-	doi:\textlink{https://doi.org/10.1007/s12021-020-09454-y}{10.1007/s12021-020-09454-y}.
+	\doi{10.1007/s12021-020-09454-y}.
 
 	\item Yarkoni T, Markiewicz CJ, de la Vega A, Gorgolewski KJ, \textbf{Salo T}, Halchenko YO, McNamara Q, DeStasio K, Poline J, \& Petrov D.
 	(2019).
 	PyBIDS: Python tools for BIDS datasets.
 	\emph{The Journal of Open Source Software}.
-	doi:\textlink{https://doi.org/10.21105/joss.01294}{10.21105/joss.01294}.
+	\doi{10.21105/joss.01294}.
 
 	\item Riedel MC, \textbf{Salo T}, Hays J, Turner MD, Sutherland MT, Turner JA, \& Laird AR.
 	(2019).
 	Automated, efficient, and accelerated knowledge modeling of the cognitive neuroimaging literature using the athena toolkit.
 	\emph{Frontiers in neuroscience}.
-	doi:\textlink{https://www.frontiersin.org/articles/10.3389/fnins.2019.00494/}{10.3389/fnins.2019.00494}.
+	\doi{10.3389/fnins.2019.00494}.
 
 	\item Gonzalez AA, Bottenhorn KL, Bartley JE, Hayes T, Riedel MC, \textbf{Salo T}, Bravo EI, Odean R, Nazareth A, \& Laird RW.
 	(2019).
 	Sex differences in brain correlates of STEM anxiety.
 	\emph{NPJ science of learning}.
-	doi:\textlink{https://doi.org/10.1038/s41539-019-0058-9}{10.1038/s41539-019-0058-9}.
+	\doi{10.1038/s41539-019-0058-9}.
 
 	\item Bartley JE, Riedel MC, \textbf{Salo T}, Boeving ER, Bottenhorn KL, Bravo EI, Odean R, Nazareth A, Laird RW, \& Sutherland MT.
 	(2019).
 	Brain activity links performance in science reasoning with conceptual approach.
 	\emph{NPJ Science of Learning}.
-	doi:\textlink{https://doi.org/10.1038/s41539-019-0059-8}{10.1038/s41539-019-0059-8}.
+	\doi{10.1038/s41539-019-0059-8}.
 
 	\item Bartley JE, Boeving ER, Riedel MC, Bottenhorn KL, \textbf{Salo T}, Eickhoff SB, Brewe E, Sutherland MT, \& Laird AR.
 	(2018).
 	Meta-analytic evidence for a core problem solving network across multiple representational domains.
 	\emph{Neuroscience \& biobehavioral reviews}.
-	doi:\textlink{https://doi.org/10.1016/j.neubiorev.2018.06.009}{10.1016/j.neubiorev.2018.06.009}.
+	\doi{10.1016/j.neubiorev.2018.06.009}.
 
 	\item Brewe E, Bartley JE, Riedel MC, Sawtelle V, \textbf{Salo T}, Boeving ER, Bravo EI, Odean R, Nazareth A, \& Bottenhorn KL.
 	(2018).
 	Toward a neurobiological basis for understanding learning in university modeling instruction physics courses.
 	\emph{Frontiers in ICT}.
-	doi:\textlink{https://doi.org/10.3389/fict.2018.00010}{10.3389/fict.2018.00010}.
+	\doi{10.3389/fict.2018.00010}.
 
 	\item Ray KL, Lesh TA, Howell AM, \textbf{Salo T}, Ragland JD, MacDonald AW, Gold JM, Silverstein SM, Barch DM, \& Carter CS.
 	(2017).
 	Functional network changes and cognitive control in schizophrenia.
 	\emph{NeuroImage: Clinical}.
-	doi:\textlink{https://doi.org/10.1016/j.nicl.2017.05.001}{10.1016/j.nicl.2017.05.001}.
+	\doi{10.1016/j.nicl.2017.05.001}.
 
 	\item Lopez-Garcia P, Lesh TA, \textbf{Salo T}, Barch DM, MacDonald AW, Gold JM, Ragland JD, Strauss M, Silverstein SM, \& Carter CS.
 	(2016).
 	The neural circuitry supporting goal maintenance during cognitive control: a comparison of expectancy AX-CPT and dot probe expectancy paradigms.
 	\emph{Cognitive, Affective, \& Behavioral Neuroscience}.
-	doi:\textlink{https://doi.org/10.3758/s13415-015-0384-1}{10.3758/s13415-015-0384-1}.
+	\doi{10.3758/s13415-015-0384-1}.
 
 	\item Phillips RC, \textbf{Salo T}, \& Carter CS. (2015).
 	Distinct neural correlates for attention lapses in patients with schizophrenia and healthy participants.
 	\emph{Frontiers in human neuroscience}.
-	doi:\textlink{https://doi.org/10.3389/fnhum.2015.00502}{10.3389/fnhum.2015.00502}.
+	\doi{10.3389/fnhum.2015.00502}.
+
+\end{enumerate}
+
+\bigskip
+
+\begin{center}\sectionstyle{ACCEPTED IN PRINCIPLE}\end{center}
+
+\begin{enumerate}
+
+	\item \textbf{Salo T}, Bottenhorn KL, DuPre EM, Riedel MC, Handwerker DA, \& Laird AR.
+	(2022).
+	Can multi-echo denoising remove motion-related noise? A replication \& extension of Power et al. (2018).
+	\emph{Royal Society Open Science}.
 
 \end{enumerate}
 
@@ -447,74 +834,72 @@ Bachelor of Arts,
 
 \begin{enumerate}
 
+	\item \textbf{Salo T}, Yarkoni T, Nichols TE, Poline JB, Bilgel M, Bottenhorn KL, Jarecka D, Kent JD, Kimbler A, Nielson DM, Oudyk KM, Peraza JA, Pérez A, Reeders PC, Yanes JA, \& Laird AR.
+	(2022).
+	NiMARE: Neuroimaging Meta-Analysis Research Environment.
+	\emph{NeuroLibre}.\footnote{This preprint is an interactive Jupyter book in which users can execute NiMARE analyses online. It has been submitted to Aperture for peer review and publication.}
+
 	\item Pankey BS, Riedel MC, Cowan I, Bartley JE, Lobo RP, Hill-Bowen LD, \textbf{Salo T}, Musser ED, Sutherland MT, \& Laird AR.
 	(2022).
 	Extended functional connectivity of convergent structural alterations among individuals with PTSD: A neuroimaging meta-analysis.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2022.04.07.487478}{10.1101/2022.04.07.487478}.
+	\doi{10.1101/2022.04.07.487478}.
 
 	\item Lobo RP, Bottenhorn KL, Riedel MC, Toma AI, Hare MM, Smith DD, Moor AC, Cowan IK, Valdes JA, Bartley JE, \textbf{Salo T}, ..., \& Laird AR.
 	(2022).
 	Neural systems underlying RDoC social constructs: An activation likelihood estimation meta-analysis.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2022.04.04.487016}{10.1101/2022.04.04.487016}.
+	\doi{10.1101/2022.04.04.487016}.
 
 	\item Bottenhorn KL, \textbf{Salo T}, Riedel MC, Sutherland MT, Robinson JL, Musser ED, \& Laird AR.
 	(2021).
 	Denoising physiological data collected during multi-band, multi-echo EPI sequences.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.04.01.437293}{10.1101/2021.04.01.437293}.
+	\doi{10.1101/2021.04.01.437293}.
 
 	\item Bottenhorn K, Bartley J, Riedel M, \textbf{Salo T}, Bravo E, Odean R, Nazareth A, Laird R, Pruden S, \& Sutherland M.
 	(2021).
 	Intelligence and academic performance: Is it all in your head?.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.01.23.427928}{10.1101/2021.01.23.427928}.
+	\doi{10.1101/2021.01.23.427928}.
 
 	\item Clement P, Castellaro M, Okell TW, Thomas DL, Vandemaele P, Elgayar S, Oliver-Taylor A, Kirk T, Woods JG, Vos S, ..., \textbf{The BIDS Maintainers}\footnote{Member of the BIDS maintainers group}, ..., \& Mutsaerts H.
 	(2021).
 	ASL-BIDS, the brain imaging data structure extension for arterial spin labeling.
 	\emph{PsyArXiv}.
+	\doi{10.31234/osf.io/e87y3}
 
 	\item Karakuzu A, Appelhoff S, Auer T, Boudreau M, Feingold F, Khan AR, Lazari A, Markiewicz C, Mulder MJ, Phillips C, \textbf{Salo T}, ..., \& de Hollander G.
 	(2021).
 	qMRI-BIDS: An extension to the brain imaging data structure for quantitative magnetic resonance imaging data.
 	\emph{medRxiv}.
-	doi:\textlink{https://doi.org/10.1101/2021.10.22.21265382}{10.1101/2021.10.22.21265382}.
+	\doi{10.1101/2021.10.22.21265382}.
 
 	\item Bartley JE, Riedel MC, \textbf{Salo T}, Bottenhorn KL, Boeving ER, Laird RW, Sutherland MT, Pruden SM, Brewe E, \& Laird AR.
 	(2019).
 	Sex and pedagogy influences in physics learning-related reorganization of brain activation.
 	\emph{bioRxiv}.
-	doi:\textlink{https://doi.org/10.1101/791301}{10.1101/791301}.
+	\doi{10.1101/791301}.
+
+\end{enumerate}
+
+\newpage
+
+\begin{center}\sectionstyle{OPEN DATASETS}\end{center}
+
+\begin{enumerate}
+
+	\item \textbf{Salo T}\footnote{\label{note2}Contributed equally}, Bottenhorn KL\cref{note2}, Riedel MC, Flannery JS, Kimbler A, Laird RW, \& Laird AR.
+	(2020).
+	Dense Investigation of Variability of Affect (DIVA).
+	OpenNeuro [Dataset].
+	\doi{10.18112/openneuro.ds002278.v1.0.1}.
 
 \end{enumerate}
 
 \bigskip
 
 \begin{center}\sectionstyle{INVITED TALKS AND SOFTWARE DEMONSTRATIONS}\end{center}
-
-\begin{enumerate}
-
-    \item \textbf{Salo T} \& Uruñuela E.
-	(2020).
-	How to Start an Open Science Project from Scratch: ICA-AROMA.
-    Presented at BrainHack Donostia; virtual.
-    More information \textlink{https://nbclab.github.io/presentations/salo-neurosynth-presentation}{here}.
-
-	\bigskip
-
-    \item \textbf{Salo T}.
-	(2020).
-	BIDS for MRI: Structure and Conversion.
-	Presented at the University of Oldenburg Open and reproducible neuroimaging workshop; virtual.
-    More information \textlink{https://figshare.com/projects/BIDS_for_MRI_Structure_and_Conversion/92066}{here}.
-
-\end{enumerate}
-
-\bigskip
-
-\begin{center}\sectionstyle{PRESENTATIONS}\end{center}
 
 \begin{enumerate}
 
@@ -529,6 +914,26 @@ Bachelor of Arts,
 	Hands-on tutorial with NiMARE.
 	Presented at the Organization for Human Brain Mapping 2021 Annual Meeting; virtual.
 	More information \textlink{https://nbclab.github.io/talks/salo-ohbm-nimare}{here}.
+
+    \item \textbf{Salo T} \& Uruñuela E.
+	(2020).
+	How to Start an Open Science Project from Scratch: ICA-AROMA.
+    Presented at BrainHack Donostia; virtual.
+    More information \textlink{https://nbclab.github.io/presentations/salo-neurosynth-presentation}{here}.
+
+    \item \textbf{Salo T}.
+	(2020).
+	BIDS for MRI: Structure and Conversion.
+	Presented at the University of Oldenburg Open and reproducible neuroimaging workshop; virtual.
+    More information \textlink{https://figshare.com/projects/BIDS_for_MRI_Structure_and_Conversion/92066}{here}.
+
+\end{enumerate}
+
+\bigskip
+
+\begin{center}\sectionstyle{PRESENTATIONS}\end{center}
+
+\begin{enumerate}
 
 	\item \textbf{Salo T}.
 	(2018).
@@ -707,215 +1112,23 @@ Bachelor of Arts,
 
 \bigskip
 
-\begin{center}\sectionstyle{HONORS AND AWARDS}\end{center}
+\begin{center}\sectionstyle{ADDITIONAL SKILLS}\end{center}
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Brain Initiative Principal Investigators Meeting Trainee Travel Award
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2019}}
-\end{minipage}
+\begin{itemize}
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Organization for Human Brain Mapping Hackathon Travel Award
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2017}}
-\end{minipage}
+	\item Python, MATLAB, and bash programming.
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Organization for Human Brain Mapping Merit Abstract Travel Award
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2017}}
-\end{minipage}
+	\item Open source software development.
 
-\bigskip
+	\item Community development and support.
 
-\begin{center}\sectionstyle{HACKATHONS}\end{center}
+	\item Behavioral task programming with PsychoPy and E-Prime.
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	NiMARE/Neurosynth 2.0 Coding Sprint
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2022}}
-\end{minipage}
+	\item FMRI processing, analysis, and meta-analysis, using a range of tools, including Nilearn, Nipype, fMRIPrep, AFNI, SPM, and NiMARE.
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	BIDS Schema Coding Sprint
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2022}}
-\end{minipage}
+	\item Neuroimaging study design.
 
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	OHBM Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2021}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	BrainHack Donostia
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2020}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	OHBM Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2020}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	NIH Code Convergence
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2019}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	NIH Tedana Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2019}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	OHBM Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2019}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Coastal Coding
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2019}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	FIU Brainconn Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2018}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	BrainHack Montreal
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2018}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Code Rodeo
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2018}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	OHBM Hackathon
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2017}}
-\end{minipage}
-
-\begin{minipage}[t]{.85\linewidth}
-	\flushleft
-	\noindent
-	Neurohackweek
-	\end{minipage}
-	\hfill
-	\begin{minipage}[t]{.15\linewidth}
-	\flushright
-	\noindent
-	\textsc{\textbf{2016}}
-\end{minipage}
+\end{itemize}
 
 \begin{bottompar}
 	\begin{center}
